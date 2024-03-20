@@ -1,0 +1,11 @@
+User ID,Amount,Timestamp,Merchant Name
+user1,100.50,2024-03-14 10:30:00,Store A
+user2,75.20,2024-03-14 12:45:00,Store B
+user3,150.00,2024-03-14 15:20:00,Store C
+user1,25.00,2024-03-14 16:30:00,Store D
+user2,50.00,2024-03-14 18:00:00,Store E
+user3,75.00,2024-03-14 19:30:00,Store F
+user1,100.50,2024-03-14 10:30:00,Store A
+user2,75.20,2024-03-14 12:45:00,Store B
+user3,150.00,2024-03-14 15:20:00,Store C
+user1,25.00,2024-03-14 16:30:00,Store D
