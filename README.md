@@ -15,6 +15,10 @@ The system follows a modular architecture with the following components:
 
 1. **Core Service**
 - `FraudDetectionService`: This is the main service class responsible for encapsulating the fraud detection logic and coordinating the overall process. It orchestrates the interactions between various components and performs the necessary computations to determine potential fraudulent activities.
+- `UserService`: This service class is responsible for periodically (every hour) updating the median transaction amount for each user based on their transactions in the last 6 months. Since the median for each user will not be changing drastically after each transaction, making this process asynchronous helps in improving the overall system performance.
+- `TransactionReaderService`: This service class is responsible for reading transactions from a CSV file. It can be modified to read transactions from other data sources like MySql database.  After parsing a row from the data source, it adds the transaction to the corresponding User and Merchant objects, and returns the Transaction object.
+
+
 
 2. **Data Access Objects**
 - `UserDAO`, `MerchantDAO`, `TransactionDAO`: These Data Access Object (DAO) classes are responsible for interacting with the database and retrieving relevant data required for fraud detection. Each DAO class is dedicated to handling data related to users, merchants, and transactions, respectively.
